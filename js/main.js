@@ -82,6 +82,18 @@
         }
     });
 
+    // --- Service area tags - click to scroll to contact ---
+    var areaTags = document.querySelectorAll('.area-tag');
+    areaTags.forEach(function (tag) {
+        tag.style.cursor = 'pointer';
+        tag.addEventListener('click', function () {
+            var contactSection = document.getElementById('contact');
+            if (contactSection) {
+                contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    });
+
     // --- Scroll reveal (fade-up) with glassmorphism effects ---
     function initScrollReveal() {
         var elements = document.querySelectorAll(
