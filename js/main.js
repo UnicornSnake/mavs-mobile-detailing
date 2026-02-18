@@ -207,7 +207,7 @@
 
             // For now, show success (replace with actual form endpoint)
             var action = contactForm.getAttribute('action');
-            if (action && action.indexOf('FORM_ID') === -1) {
+            if (action && action.indexOf('formspree.io') !== -1) {
                 // Real endpoint configured
                 fetch(action, {
                     method: 'POST',
